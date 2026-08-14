@@ -54,5 +54,8 @@ public class math {
         System.out.println("あなたの年齢を入力してください。");
         int userAge = new java.util.Scanner(System.in).nextInt();
         System.out.println("ようこそ、" + userAge + "歳の" + userName + "さん。");
+    
+    
+    
     }
 }
