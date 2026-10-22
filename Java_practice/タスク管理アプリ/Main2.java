@@ -1,8 +1,10 @@
+package タスク管理アプリ;
+
 import java.util.Scanner;
 
 public class Main2 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in, "UTF-8");
 
         String[] tasks = new String[3];
         int[] status = new int[3];
@@ -24,5 +26,6 @@ public class Main2 {
                 System.out.println("[未完了] " + tasks[i]);
             }
         }
+        scanner.close();
     }
 }

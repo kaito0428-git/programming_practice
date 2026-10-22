@@ -1,4 +1,5 @@
-public class JavaDrill {
+package 条件分岐の練習;
+public class 条件分岐 {
     public static void main(String[] args) {
         int a = -5;
         System.out.println("a=" +a);
@@ -21,7 +22,7 @@ public class JavaDrill {
         }
 
 
-        int dice = (int)(Math.random()*7)+1;
+        int dice = (int)(Math.random()*6)+1;
         System.out.println("さいころの目:"+dice);
         if(1 <= dice && dice <= 6){
            if(dice == 2 || dice == 4 || dice == 6){
@@ -56,7 +57,7 @@ public class JavaDrill {
         if(s >=5){
             System.out.println("5以上です。");
         }else{
-            System.out.println("5以下です。");
+            System.out.println("5未満です。");
         }
 
 
@@ -132,7 +133,7 @@ public class JavaDrill {
 
         int v = (int)(Math.random()*100);
         System.out.println(v);
-            if(10 <= v || 90 > v){
+            if(v <= 10 || v >= 90){
             System.out.println("10以下か90以上の値です。");
         }else{
             System.out.println("10より大きく90未満です。");

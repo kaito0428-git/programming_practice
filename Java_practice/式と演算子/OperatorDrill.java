@@ -1,5 +1,10 @@
-public class math {
-    public static void main(String[] arges){
+package 式と演算子;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class OperatorDrill {
+    public static void main(String[] args) {
         int a = 20;
         int b = a + 5;
         System.out.println(a);
@@ -15,11 +20,11 @@ public class math {
         double d = f;
         System.out.println(f);
         System.out.println(d);
-        
-        int age = (int)3.2;
+
+        int age = (int) 3.2;
         System.out.println(age);
 
-        d= 8.5 / 2;
+        d = 8.5 / 2;
         long l = 5 + 2L;
         System.out.println(d);
         System.out.println(l);
@@ -39,23 +44,22 @@ public class math {
 
         a = 5;
         b = 3;
-        int m = Math.max(a,b);
+        int m = Math.max(a, b);
         System.out.println("比較実験：" + a + "と" + b + "の大きい方は" + m + "です。");
 
         String ageText = "31";
         int n = Integer.parseInt(ageText);
         System.out.println("あなたは来年、" + (n + 1) + "歳になりますね。");
 
-        int r = new java.util.Random().nextInt(90);
+        int r = new Random().nextInt(90);
         System.out.println("あなたはたぶん、" + r + "歳ですね？");
 
+        Scanner scanner = new Scanner(System.in, "UTF-8");
         System.out.println("あなたの名前を入力してください。");
-        String userName = new java.util.Scanner(System.in).nextLine();
+        String userName = scanner.nextLine();
         System.out.println("あなたの年齢を入力してください。");
-        int userAge = new java.util.Scanner(System.in).nextInt();
+        int userAge = scanner.nextInt();
         System.out.println("ようこそ、" + userAge + "歳の" + userName + "さん。");
-    
-    
-    
+        scanner.close();
     }
 }
