@@ -1,0 +1,924 @@
+Last login: Tue Oct 27 11:42:11 2026 from 192.168.56.1
+[kaito@mw01 ~]$ systemctl status chronyd
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: >
+     Active: active (running) since Tue 2026-10-27 11:54:29 JST; 4min 45s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SU>
+   Main PID: 734 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 5.1M (peak: 5.5M)
+        CPU: 901ms
+     CGroup: /system.slice/chronyd.service
+             └─734 /usr/sbin/chronyd -F 2
+
+Oct 27 11:54:37 mw01 chronyd[734]: Can't synchronise: no selectable sources (5 >
+Oct 27 11:54:42 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalin>
+Oct 27 11:54:42 mw01 chronyd[734]: System clock wrong by -52.454007 seconds
+Oct 27 11:53:50 mw01 chronyd[734]: System clock was stepped by -52.454007 secon>
+Oct 27 11:54:42 mw01 chronyd[734]: Forward time jump detected!
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 >
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalin>
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 secon>
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux>
+lines 1-23...skipping...
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: >
+     Active: active (running) since Tue 2026-10-27 11:54:29 JST; 4min 45s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SU>
+   Main PID: 734 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 5.1M (peak: 5.5M)
+        CPU: 901ms
+     CGroup: /system.slice/chronyd.service
+             └─734 /usr/sbin/chronyd -F 2
+
+Oct 27 11:54:37 mw01 chronyd[734]: Can't synchronise: no selectable sources (5 >
+Oct 27 11:54:42 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalin>
+Oct 27 11:54:42 mw01 chronyd[734]: System clock wrong by -52.454007 seconds
+Oct 27 11:53:50 mw01 chronyd[734]: System clock was stepped by -52.454007 secon>
+Oct 27 11:54:42 mw01 chronyd[734]: Forward time jump detected!
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 >
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalin>
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 secon>
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux>
+~
+lines 1-23/23 (END)...skipping...
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: >
+     Active: active (running) since Tue 2026-10-27 11:54:29 JST; 4min 45s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SU>
+   Main PID: 734 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 5.1M (peak: 5.5M)
+        CPU: 901ms
+     CGroup: /system.slice/chronyd.service
+             └─734 /usr/sbin/chronyd -F 2
+
+Oct 27 11:54:37 mw01 chronyd[734]: Can't synchronise: no selectable sources (5 >
+Oct 27 11:54:42 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalin>
+Oct 27 11:54:42 mw01 chronyd[734]: System clock wrong by -52.454007 seconds
+Oct 27 11:53:50 mw01 chronyd[734]: System clock was stepped by -52.454007 secon>
+Oct 27 11:54:42 mw01 chronyd[734]: Forward time jump detected!
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 >
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalin>
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 secon>
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux>
+~
+~
+lines 1-23/23 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: e>
+     Active: active (running) since Tue 2026-10-27 11:54:29 JST; 4min 45s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUC>
+   Main PID: 734 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 5.1M (peak: 5.5M)
+        CPU: 901ms
+     CGroup: /system.slice/chronyd.service
+             └─734 /usr/sbin/chronyd -F 2
+
+Oct 27 11:54:37 mw01 chronyd[734]: Can't synchronise: no selectable sources (5 u>
+Oct 27 11:54:42 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinu>
+Oct 27 11:54:42 mw01 chronyd[734]: System clock wrong by -52.454007 seconds
+Oct 27 11:53:50 mw01 chronyd[734]: System clock was stepped by -52.454007 seconds
+Oct 27 11:54:42 mw01 chronyd[734]: Forward time jump detected!
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 u>
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinu>
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 seconds
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux.>
+~
+~
+lines 1-23/23 (END)...skipping...
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: e>
+     Active: active (running) since Tue 2026-10-27 11:54:29 JST; 4min 45s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUC>
+   Main PID: 734 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 5.1M (peak: 5.5M)
+        CPU: 901ms
+     CGroup: /system.slice/chronyd.service
+             └─734 /usr/sbin/chronyd -F 2
+
+Oct 27 11:54:37 mw01 chronyd[734]: Can't synchronise: no selectable sources (5 u>
+Oct 27 11:54:42 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinu>
+Oct 27 11:54:42 mw01 chronyd[734]: System clock wrong by -52.454007 seconds
+Oct 27 11:53:50 mw01 chronyd[734]: System clock was stepped by -52.454007 seconds
+Oct 27 11:54:42 mw01 chronyd[734]: Forward time jump detected!
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 u>
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinu>
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 seconds
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux.>
+~
+~
+~
+lines 1-23/23 (END)...skipping...
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: en>
+     Active: active (running) since Tue 2026-10-27 11:54:29 JST; 4min 45s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCC>
+   Main PID: 734 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 5.1M (peak: 5.5M)
+        CPU: 901ms
+     CGroup: /system.slice/chronyd.service
+             └─734 /usr/sbin/chronyd -F 2
+
+Oct 27 11:54:37 mw01 chronyd[734]: Can't synchronise: no selectable sources (5 un>
+Oct 27 11:54:42 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux>
+Oct 27 11:54:42 mw01 chronyd[734]: System clock wrong by -52.454007 seconds
+Oct 27 11:53:50 mw01 chronyd[734]: System clock was stepped by -52.454007 seconds
+Oct 27 11:54:42 mw01 chronyd[734]: Forward time jump detected!
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 un>
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux>
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 seconds
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux.p>
+~
+~
+~
+~
+lines 1-23/23 (END)...skipping...
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: ena>
+     Active: active (running) since Tue 2026-10-27 11:54:29 JST; 4min 45s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCE>
+   Main PID: 734 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 5.1M (peak: 5.5M)
+        CPU: 901ms
+     CGroup: /system.slice/chronyd.service
+             └─734 /usr/sbin/chronyd -F 2
+
+Oct 27 11:54:37 mw01 chronyd[734]: Can't synchronise: no selectable sources (5 unr>
+Oct 27 11:54:42 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.>
+Oct 27 11:54:42 mw01 chronyd[734]: System clock wrong by -52.454007 seconds
+Oct 27 11:53:50 mw01 chronyd[734]: System clock was stepped by -52.454007 seconds
+Oct 27 11:54:42 mw01 chronyd[734]: Forward time jump detected!
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 unr>
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.>
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 seconds
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux.po>
+~
+~
+~
+~
+~
+lines 1-23/23 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: enab>
+     Active: active (running) since Tue 2026-10-27 11:54:29 JST; 4min 45s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCES>
+   Main PID: 734 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 5.1M (peak: 5.5M)
+        CPU: 901ms
+     CGroup: /system.slice/chronyd.service
+             └─734 /usr/sbin/chronyd -F 2
+
+Oct 27 11:54:37 mw01 chronyd[734]: Can't synchronise: no selectable sources (5 unre>
+Oct 27 11:54:42 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.p>
+Oct 27 11:54:42 mw01 chronyd[734]: System clock wrong by -52.454007 seconds
+Oct 27 11:53:50 mw01 chronyd[734]: System clock was stepped by -52.454007 seconds
+Oct 27 11:54:42 mw01 chronyd[734]: Forward time jump detected!
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 unre>
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.p>
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 seconds
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux.poo>
+~
+~
+~
+~
+~
+lines 1-23/23 (END)...skipping...
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: enabl>
+     Active: active (running) since Tue 2026-10-27 11:54:29 JST; 4min 45s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCESS)
+   Main PID: 734 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 5.1M (peak: 5.5M)
+        CPU: 901ms
+     CGroup: /system.slice/chronyd.service
+             └─734 /usr/sbin/chronyd -F 2
+
+Oct 27 11:54:37 mw01 chronyd[734]: Can't synchronise: no selectable sources (5 unrea>
+Oct 27 11:54:42 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.po>
+Oct 27 11:54:42 mw01 chronyd[734]: System clock wrong by -52.454007 seconds
+Oct 27 11:53:50 mw01 chronyd[734]: System clock was stepped by -52.454007 seconds
+Oct 27 11:54:42 mw01 chronyd[734]: Forward time jump detected!
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 unrea>
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.po>
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 seconds
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux.pool>
+~
+~
+~
+~
+~
+~
+lines 1-23/23 (END)...skipping...
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-10-27 11:54:29 JST; 4min 45s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCESS)
+   Main PID: 734 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 5.1M (peak: 5.5M)
+        CPU: 901ms
+     CGroup: /system.slice/chronyd.service
+             └─734 /usr/sbin/chronyd -F 2
+
+Oct 27 11:54:37 mw01 chronyd[734]: Can't synchronise: no selectable sources (5 unreach>
+Oct 27 11:54:42 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.pool>
+Oct 27 11:54:42 mw01 chronyd[734]: System clock wrong by -52.454007 seconds
+Oct 27 11:53:50 mw01 chronyd[734]: System clock was stepped by -52.454007 seconds
+Oct 27 11:54:42 mw01 chronyd[734]: Forward time jump detected!
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 unreach>
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.pool>
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 seconds
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux.pool.n>
+~
+~
+~
+~
+~
+~
+~
+lines 1-23/23 (END)...skipping...
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-10-27 11:54:29 JST; 4min 45s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCESS)
+   Main PID: 734 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 5.1M (peak: 5.5M)
+        CPU: 901ms
+     CGroup: /system.slice/chronyd.service
+             └─734 /usr/sbin/chronyd -F 2
+
+Oct 27 11:54:37 mw01 chronyd[734]: Can't synchronise: no selectable sources (5 unreach>
+Oct 27 11:54:42 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.pool>
+Oct 27 11:54:42 mw01 chronyd[734]: System clock wrong by -52.454007 seconds
+Oct 27 11:53:50 mw01 chronyd[734]: System clock was stepped by -52.454007 seconds
+Oct 27 11:54:42 mw01 chronyd[734]: Forward time jump detected!
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 unreach>
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.pool>
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 seconds
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux.pool.n>
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-23/23 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-10-27 11:54:29 JST; 4min 45s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCESS)
+   Main PID: 734 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 5.1M (peak: 5.5M)
+        CPU: 901ms
+     CGroup: /system.slice/chronyd.service
+             └─734 /usr/sbin/chronyd -F 2
+
+Oct 27 11:54:37 mw01 chronyd[734]: Can't synchronise: no selectable sources (5 unreacha>
+Oct 27 11:54:42 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.pool.>
+Oct 27 11:54:42 mw01 chronyd[734]: System clock wrong by -52.454007 seconds
+Oct 27 11:53:50 mw01 chronyd[734]: System clock was stepped by -52.454007 seconds
+Oct 27 11:54:42 mw01 chronyd[734]: Forward time jump detected!
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 unreacha>
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.pool.>
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 seconds
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux.pool.nt>
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-23/23 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-10-27 11:54:29 JST; 4min 45s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCESS)
+   Main PID: 734 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 5.1M (peak: 5.5M)
+        CPU: 901ms
+     CGroup: /system.slice/chronyd.service
+             └─734 /usr/sbin/chronyd -F 2
+
+Oct 27 11:54:37 mw01 chronyd[734]: Can't synchronise: no selectable sources (5 unreachab>
+Oct 27 11:54:42 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.pool.n>
+Oct 27 11:54:42 mw01 chronyd[734]: System clock wrong by -52.454007 seconds
+Oct 27 11:53:50 mw01 chronyd[734]: System clock was stepped by -52.454007 seconds
+Oct 27 11:54:42 mw01 chronyd[734]: Forward time jump detected!
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 unreachab>
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.pool.n>
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 seconds
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux.pool.ntp>
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-23/23 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-10-27 11:54:29 JST; 4min 45s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCESS)
+   Main PID: 734 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 5.1M (peak: 5.5M)
+        CPU: 901ms
+     CGroup: /system.slice/chronyd.service
+             └─734 /usr/sbin/chronyd -F 2
+
+Oct 27 11:54:37 mw01 chronyd[734]: Can't synchronise: no selectable sources (5 unreachabl>
+Oct 27 11:54:42 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.pool.nt>
+Oct 27 11:54:42 mw01 chronyd[734]: System clock wrong by -52.454007 seconds
+Oct 27 11:53:50 mw01 chronyd[734]: System clock was stepped by -52.454007 seconds
+Oct 27 11:54:42 mw01 chronyd[734]: Forward time jump detected!
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 unreachabl>
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.pool.nt>
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 seconds
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux.pool.ntp.>
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-23/23 (END)...skipping...
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-10-27 11:54:29 JST; 4min 45s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCESS)
+   Main PID: 734 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 5.1M (peak: 5.5M)
+        CPU: 901ms
+     CGroup: /system.slice/chronyd.service
+             └─734 /usr/sbin/chronyd -F 2
+
+Oct 27 11:54:37 mw01 chronyd[734]: Can't synchronise: no selectable sources (5 unreachabl>
+Oct 27 11:54:42 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.pool.nt>
+Oct 27 11:54:42 mw01 chronyd[734]: System clock wrong by -52.454007 seconds
+Oct 27 11:53:50 mw01 chronyd[734]: System clock was stepped by -52.454007 seconds
+Oct 27 11:54:42 mw01 chronyd[734]: Forward time jump detected!
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 unreachabl>
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.pool.nt>
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 seconds
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux.pool.ntp.>
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-23/23 (END)...skipping...
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-10-27 11:54:29 JST; 4min 45s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCESS)
+   Main PID: 734 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 5.1M (peak: 5.5M)
+        CPU: 901ms
+     CGroup: /system.slice/chronyd.service
+             └─734 /usr/sbin/chronyd -F 2
+
+Oct 27 11:54:37 mw01 chronyd[734]: Can't synchronise: no selectable sources (5 unreachabl>
+Oct 27 11:54:42 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.pool.nt>
+Oct 27 11:54:42 mw01 chronyd[734]: System clock wrong by -52.454007 seconds
+Oct 27 11:53:50 mw01 chronyd[734]: System clock was stepped by -52.454007 seconds
+Oct 27 11:54:42 mw01 chronyd[734]: Forward time jump detected!
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 unreachabl>
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.pool.nt>
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 seconds
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux.pool.ntp.>
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-23/23 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-10-27 11:54:29 JST; 4min 45s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCESS)
+   Main PID: 734 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 5.1M (peak: 5.5M)
+        CPU: 901ms
+     CGroup: /system.slice/chronyd.service
+             └─734 /usr/sbin/chronyd -F 2
+
+Oct 27 11:54:37 mw01 chronyd[734]: Can't synchronise: no selectable sources (5 unreachable>
+Oct 27 11:54:42 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.pool.ntp>
+Oct 27 11:54:42 mw01 chronyd[734]: System clock wrong by -52.454007 seconds
+Oct 27 11:53:50 mw01 chronyd[734]: System clock was stepped by -52.454007 seconds
+Oct 27 11:54:42 mw01 chronyd[734]: Forward time jump detected!
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 unreachable>
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.pool.ntp>
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 seconds
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux.pool.ntp.o>
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+[kaito@mw01 ~]$ sudo systemctl stop chronyd
+[sudo] password for kaito:
+[kaito@mw01 ~]$ systemctl status chronyd
+○ chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: enabled)
+     Active: inactive (dead) since Tue 2026-10-27 12:02:21 JST; 35s ago
+   Duration: 7min 52.408s
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 726 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCESS)
+   Main PID: 734 (code=exited, status=0/SUCCESS)
+        CPU: 6.749s
+
+Oct 27 11:54:42 mw01 chronyd[734]: Can't synchronise: no selectable sources (0 unreachable sources)
+Oct 27 11:56:54 mw01 chronyd[734]: Selected source 2606:4700:f1::123 (2.almalinux.pool.ntp.org)
+Oct 27 11:56:54 mw01 chronyd[734]: System clock wrong by -52.442638 seconds
+Oct 27 11:56:01 mw01 chronyd[734]: System clock was stepped by -52.442638 seconds
+Oct 27 11:57:04 mw01 chronyd[734]: Selected source 172.104.124.149 (2.almalinux.pool.ntp.org)
+Oct 27 12:02:21 mw01 chronyd[734]: chronyd exiting
+Oct 27 12:02:21 mw01 systemd[1]: Stopping NTP client/server...
+Oct 27 12:02:21 mw01 systemd[1]: chronyd.service: Deactivated successfully.
+Oct 27 12:02:21 mw01 systemd[1]: Stopped NTP client/server.
+Oct 27 12:02:21 mw01 systemd[1]: chronyd.service: Consumed 6.749s CPU time, 5.5M memory peak.
+[kaito@mw01 ~]$ clear
+
+[kaito@mw01 ~]$ sudo systemctl start chronyd
+[sudo] password for kaito:
+
+********
+Job for chronyd.service failed because a timeout was exceeded.
+See "systemctl status chronyd.service" and "journalctl -xeu chronyd.service" for details.
+[kaito@mw01 ~]$ sudo systemctl start chronyd
+[kaito@mw01 ~]$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[kaito@mw01 ~]$ sudo systemctl start chronyd
+[kaito@mw01 ~]$ systemctl status chronyd
+● chronyd.service - NTP client/server
+     Loaded: loaded (/usr/lib/systemd/system/chronyd.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2026-10-27 12:10:38 JST; 1min 11s ago
+       Docs: man:chronyd(8)
+             man:chrony.conf(5)
+    Process: 1965 ExecStart=/usr/sbin/chronyd $OPTIONS (code=exited, status=0/SUCCESS)
+   Main PID: 1967 (chronyd)
+      Tasks: 1 (limit: 23117)
+     Memory: 1.0M (peak: 1.8M)
+        CPU: 15.285s
+     CGroup: /system.slice/chronyd.service
+             └─1967 /usr/sbin/chronyd -F 2
+
+Oct 27 12:10:21 mw01 systemd[1]: Starting NTP client/server...
+Oct 27 12:10:21 mw01 chronyd[1967]: chronyd version 4.8 starting (+CMDMON +REFCLOCK +RTC +PRIVDROP +SCFILTER +SIGND +NTS +SECHASH +IPV
+Oct 27 12:10:38 mw01 chronyd[1967]: Loaded 0 symmetric keys
+Oct 27 12:10:38 mw01 chronyd[1967]: Using right/UTC timezone to obtain leap second data
+Oct 27 12:10:38 mw01 chronyd[1967]: Frequency -17.151 +/- 69.549 ppm read from /var/lib/chrony/drift
+Oct 27 12:10:38 mw01 chronyd[1967]: Loaded seccomp filter (level 2)
+Oct 27 12:10:38 mw01 systemd[1]: Started NTP client/server.
+Oct 27 12:10:43 mw01 chronyd[1967]: Selected source 2400:8902::f03c:91ff:fe50:f5f0 (2.almalinux.pool.ntp.org)
+Oct 27 12:10:43 mw01 chronyd[1967]: System clock TAI offset set to 37 seconds
+Oct 27 12:10:45 mw01 chronyd[1967]: Selected source 44.30.62.52 (2.almalinux.pool.ntp.org)
+[kaito@mw01 ~]$ clear
+
+
+
+
+
+
+
+
+[kaito@mw01 ~]$ systemctl list-units --type=service --state=running
+  UNIT                     LOAD   ACTIVE SUB     DESCRIPTION
+  auditd.service           loaded active running Security Auditing Service
+  chronyd.service          loaded active running NTP client/server
+  crond.service            loaded active running Command Scheduler
+  dbus-broker.service      loaded active running D-Bus System Message Bus
+  firewalld.service        loaded active running firewalld - dynamic firewall daemon
+  getty@tty1.service       loaded active running Getty on tty1
+  irqbalance.service       loaded active running irqbalance daemon
+  NetworkManager.service   loaded active running Network Manager
+  rsyslog.service          loaded active running System Logging Service
+  sshd.service             loaded active running OpenSSH server daemon
+  systemd-journald.service loaded active running Journal Service
+  systemd-logind.service   loaded active running User Login Management
+  systemd-udevd.service    loaded active running Rule-based Manager for Device Events and Files
+  user@1000.service        loaded active running User Manager for UID 1000
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+14 loaded units listed.
+[kaito@mw01 ~]$ systemctl list-units --failed
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+0 loaded units listed.
+[kaito@mw01 ~]$ sudo tail -f /var/log/secure
+[sudo] password for kaito:
+Oct 27 12:10:16 mw01 sudo[1946]: pam_unix(sudo:session): session closed for user root
+Oct 27 12:10:21 mw01 sudo[1960]:   kaito : TTY=pts/0 ; PWD=/home/kaito ; USER=root ; COMMAND=/bin/systemctl start chronyd
+Oct 27 12:10:21 mw01 sudo[1960]: pam_unix(sudo:session): session opened for user root(uid=0) by kaito(uid=1000)
+Oct 27 12:10:38 mw01 sudo[1960]: pam_unix(sudo:session): session closed for user root
+Oct 27 12:10:50 mw01 sudo[1970]:   kaito : TTY=pts/0 ; PWD=/home/kaito ; USER=root ; COMMAND=/bin/systemctl start chronyd
+Oct 27 12:10:50 mw01 sudo[1970]: pam_unix(sudo:session): session opened for user root(uid=0) by kaito(uid=1000)
+Oct 27 12:10:50 mw01 sudo[1970]: pam_unix(sudo:session): session closed for user root
+Oct 27 12:18:39 mw01 unix_chkpwd[1988]: password check failed for user (kaito)
+Oct 27 12:18:39 mw01 sshd-session[1986]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.1                     8.56.1  user=kaito
+Oct 27 12:18:41 mw01 sshd-session[1986]: Failed password for kaito from 192.168.56.1 port 57387 ssh2
+Oct 27 12:19:40 mw01 sudo[1990]:   kaito : TTY=pts/0 ; PWD=/home/kaito ; USER=root ; COMMAND=/bin/tail -f /var/log/secure
+Oct 27 12:19:40 mw01 sudo[1990]: pam_unix(sudo:session): session opened for user root(uid=0) by kaito(uid=1000)
+Oct 27 12:19:49 mw01 unix_chkpwd[1996]: password check failed for user (kaito)
+Oct 27 12:19:50 mw01 sshd-session[1986]: Failed password for kaito from 192.168.56.1 port 57387 ssh2
+Oct 27 12:20:21 mw01 sshd[797]: Timeout before authentication for connection from 192.168.56.1 to 192.168.56.11, pid = 1986
+Oct 27 12:24:11 mw01 sshd-session[1997]: Accepted password for kaito from 192.168.56.1 port 60513 ssh2
+Oct 27 12:24:11 mw01 sshd-session[1997]: pam_unix(sshd:session): session opened for user kaito(uid=1000) by kaito(uid=0)
+^C
+[kaito@mw01 ~]$ sudo grep "Faild password" /var/log/secure | wc -1
+[sudo] password for kaito: wc: invalid option -- '1'
+Try 'wc --help' for more information.
+
+sudo: a password is required
+[kaito@mw01 ~]$ sudo grep "Failed password" /var/log/secure
+[sudo] password for kaito:
+Oct 27 12:18:41 mw01 sshd-session[1986]: Failed password for kaito from 192.168.56.1 port 57387 ssh2
+Oct 27 12:19:50 mw01 sshd-session[1986]: Failed password for kaito from 192.168.56.1 port 57387 ssh2
+[kaito@mw01 ~]$ sudo grep "Failed password" /var/log/secure | wc -I
+wc: invalid option -- 'I'
+Try 'wc --help' for more information.
+[kaito@mw01 ~]$ sudo grep "Failed password" /var/log/secure | wc -l
+4
+[kaito@mw01 ~]$ sudo grep "Failed password" /var/log/secure
+[sudo] password for kaito:
+Oct 27 12:18:41 mw01 sshd-session[1986]: Failed password for kaito from 192.168.56.1 port 57387 ssh2
+Oct 27 12:19:50 mw01 sshd-session[1986]: Failed password for kaito from 192.168.56.1 port 57387 ssh2
+Oct 27 12:34:24 mw01 sudo[2041]:   kaito : TTY=pts/0 ; PWD=/home/kaito ; USER=root ; COMMAND=/bin/grep 'Failed password' /var/log/secu                     e
+Oct 27 12:34:36 mw01 sudo[2047]:   kaito : TTY=pts/0 ; PWD=/home/kaito ; USER=root ; COMMAND=/bin/grep 'Failed password' /var/log/secu                     e
+Oct 27 12:38:02 mw01 sudo[2052]:   kaito : TTY=pts/0 ; PWD=/home/kaito ; USER=root ; COMMAND=/bin/grep 'Failed password' /var/log/secu                     e
+[kaito@mw01 ~]$ sudo grep "Failed password for" /var/log/secure | wc -l
+2
+[kaito@mw01 ~]$ journalctl -u sshd --since today
+Oct 27 11:54:30 mw01 systemd[1]: Starting OpenSSH server daemon...
+Oct 27 11:54:30 mw01 sshd[797]: Server listening on 0.0.0.0 port 22.
+Oct 27 11:54:30 mw01 sshd[797]: Server listening on :: port 22.
+Oct 27 11:54:30 mw01 systemd[1]: Started OpenSSH server daemon.
+Oct 27 11:57:34 mw01 sshd-session[1862]: Accepted password for kaito from 192.168.56.1 port 58744 ssh2
+Oct 27 11:57:34 mw01 sshd-session[1862]: pam_unix(sshd:session): session opened for user kaito(uid=1000) by kaito(uid=0)
+Oct 27 12:18:39 mw01 sshd-session[1986]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.1  user=kaito
+Oct 27 12:18:41 mw01 sshd-session[1986]: Failed password for kaito from 192.168.56.1 port 57387 ssh2
+Oct 27 12:19:50 mw01 sshd-session[1986]: Failed password for kaito from 192.168.56.1 port 57387 ssh2
+Oct 27 12:20:21 mw01 sshd[797]: Timeout before authentication for connection from 192.168.56.1 to 192.168.56.11, pid = 1986
+Oct 27 12:24:11 mw01 sshd-session[1997]: Accepted password for kaito from 192.168.56.1 port 60513 ssh2
+Oct 27 12:24:11 mw01 sshd-session[1997]: pam_unix(sshd:session): session opened for user kaito(uid=1000) by kaito(uid=0)
+[kaito@mw01 ~]$ journalctl -p err -b
+Oct 27 11:53:39 mw01 kernel: Warning: Unmaintained driver is detected: e1000
+Oct 27 11:53:39 mw01 kernel: Warning: Unmaintained driver is detected: e1000
+Oct 27 11:53:39 mw01 kernel: Warning: Unmaintained driver is detected: e1000_init_module
+Oct 27 11:54:29 mw01 kernel: vmwgfx 0000:00:02.0: [drm] *ERROR* vmwgfx seems to be running on an unsupported hypervisor.
+Oct 27 11:54:29 mw01 kernel: vmwgfx 0000:00:02.0: [drm] *ERROR* This configuration is likely broken.
+Oct 27 11:54:29 mw01 kernel: vmwgfx 0000:00:02.0: [drm] *ERROR* Please switch to a supported graphics device to avoid problems.
+Oct 27 12:10:16 mw01 kernel: watchdog: BUG: soft lockup - CPU#1 stuck for 49s! [systemd:1]
+Oct 27 12:10:16 mw01 systemd[1]: Failed to start NTP client/server.
+Oct 27 12:10:18 mw01 rsyslogd[825]: get tty for session '1' failed with [61]:No data available  [v8.2510.0-2.el9_8.2]
+Oct 27 12:27:10 mw01 sudo[2037]: pam_unix(sudo:auth): conversation failed
+Oct 27 12:27:10 mw01 sudo[2037]: pam_unix(sudo:auth): auth could not identify password for [kaito]
+[kaito@mw01 ~]$ sudo taill -n 20 /var/log/messages
+[sudo] password for kaito:
+sudo: taill: command not found
+[kaito@mw01 ~]$ sudo tail -n 20 /var/log/messages
+[sudo] password for kaito:
+Oct 27 12:10:38 mw01 chronyd[1967]: Loaded seccomp filter (level 2)
+Oct 27 12:10:38 mw01 systemd[1]: Started NTP client/server.
+Oct 27 12:10:43 mw01 chronyd[1967]: Selected source 2400:8902::f03c:91ff:fe50:f5f0 (2.almalinux.pool.ntp.org)
+Oct 27 12:10:43 mw01 chronyd[1967]: System clock TAI offset set to 37 seconds
+Oct 27 12:10:45 mw01 chronyd[1967]: Selected source 44.30.62.52 (2.almalinux.pool.ntp.org)
+Oct 27 12:11:49 mw01 chronyd[1967]: Selected source 2001:418:3ff::53 (2.almalinux.pool.ntp.org)
+Oct 27 12:12:54 mw01 chronyd[1967]: Selected source 44.30.62.52 (2.almalinux.pool.ntp.org)
+Oct 27 12:13:38 mw01 systemd[1]: Starting dnf makecache...
+Oct 27 12:13:38 mw01 dnf[1979]: Metadata cache refreshed recently.
+Oct 27 12:13:38 mw01 systemd[1]: dnf-makecache.service: Deactivated successfully.
+Oct 27 12:13:38 mw01 systemd[1]: Finished dnf makecache.
+Oct 27 12:24:11 mw01 systemd-logind[730]: New session 3 of user kaito.
+Oct 27 12:24:11 mw01 systemd[1]: Started Session 3 of User kaito.
+Oct 27 12:24:11 mw01 systemd[1]: Starting Hostname Service...
+Oct 27 12:24:11 mw01 systemd[1]: Started Hostname Service.
+Oct 27 12:24:42 mw01 systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+Oct 27 13:21:39 mw01 systemd[1]: Starting dnf makecache...
+Oct 27 13:21:39 mw01 dnf[2098]: Metadata cache refreshed recently.
+Oct 27 13:21:39 mw01 systemd[1]: dnf-makecache.service: Deactivated successfully.
+Oct 27 13:21:39 mw01 systemd[1]: Finished dnf makecache.
+[kaito@mw01 ~]$
