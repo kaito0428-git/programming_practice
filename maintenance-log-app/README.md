@@ -9,7 +9,7 @@
 
 ## デモ
 
-公開URL:準備中
+公開URL:https://kaito-maintenance-log.streamlit.app
 
 ## 主な機能
 

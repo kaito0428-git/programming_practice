@@ -1,9 +1,18 @@
 # データベース(SQLite)の処理をまとめたファイル
 import sqlite3
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 # データベースファイルの場所(このファイルと同じフォルダに作る)
 DB_PATH = Path(__file__).parent / "maintenance.db"
+
+# 日本時間(UTC+9時間)。日本はサマータイムがないので固定でよい
+JST = timezone(timedelta(hours=9))
+
+
+def now_jst():
+    """現在の日本時間を返す(公開サーバーがUTCでも日本時間になる)"""
+    return datetime.now(JST)
 
 
 def get_connection():
@@ -70,10 +79,12 @@ def add_log(work_at, customer, device, symptom, cause, action, remaining, status
         conn.execute(
             """
             INSERT INTO work_logs
-                (work_at, customer, device, symptom, cause, action, remaining, status)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                (work_at, customer, device, symptom, cause, action, remaining, status, created_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
-            (work_at, customer, device, symptom, cause, action, remaining, status),
+            (work_at, customer, device, symptom, cause, action, remaining, status,
+             # 登録日時は日本時間で保存する(例: 2026-11-24 14:30:05)
+             now_jst().strftime("%Y-%m-%d %H:%M:%S")),
         )
 
 

@@ -63,8 +63,10 @@ if page == "新規登録":
     with st.form("log_form", clear_on_submit=True):
         # 作業日時(日付と時刻を横に並べる)
         col1, col2 = st.columns(2)
-        work_date = col1.date_input("作業日")
-        work_time = col2.time_input("作業時刻")
+        # 初期値は日本時間の現在日時(秒は切り捨てて、入力途中に値が変わらないようにする)
+        now = db.now_jst().replace(second=0, microsecond=0)
+        work_date = col1.date_input("作業日", value=now.date())
+        work_time = col2.time_input("作業時刻", value=now.time())
 
         customer = st.text_input("顧客名 *")
         device = st.text_input("機器名 *")
