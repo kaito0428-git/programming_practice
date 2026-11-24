@@ -52,6 +52,9 @@
 ## ローカルでの起動方法
 
 ```bash
+# 0. アプリのフォルダへ移動
+cd maintenance-log-app
+
 # 1. 仮想環境を作成して有効化(Windowsの例)
 python -m venv venv
 venv\Scripts\activate

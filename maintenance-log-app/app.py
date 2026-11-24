@@ -11,6 +11,8 @@ st.set_page_config(page_title="保守作業記録", layout="wide")
 
 # 起動時にテーブルを準備する
 db.init_db()
+# データベースが空ならサンプル記録を入れる(公開デモ用)
+db.seed_sample_data()
 
 
 
@@ -46,6 +48,7 @@ def make_report(log):
 
 
 st.title("保守作業記録")
+st.warning("デモ用アプリです。実在の顧客情報は入力しないでください。")
 
 # サイドバーで画面を切り替える
 page = st.sidebar.radio("メニュー", ["新規登録", "一覧表示"])
