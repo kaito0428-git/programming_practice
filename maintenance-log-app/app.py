@@ -12,6 +12,39 @@ st.set_page_config(page_title="保守作業記録", layout="wide")
 # 起動時にテーブルを準備する
 db.init_db()
 
+
+
+def make_report(log):
+    """作業記録1件から、顧客向けの作業報告書の文章を作る"""
+    # 「2026-11-24 10:00」を「11月24日 10時00分」の形に変換する
+    work_at = datetime.strptime(log["work_at"], "%Y-%m-%d %H:%M")
+    when = f"{work_at.month}月{work_at.day}日 {work_at.hour}時{work_at.minute:02d}分"
+
+    # 1文目: いつ・誰の・何について・どんな事象か
+    if log["symptom"]:
+        lines = [f"{when}、{log['customer']}様の{log['device']}について、{log['symptom']}の事象を確認しました。"]
+    else:
+        lines = [f"{when}、{log['customer']}様の{log['device']}について、作業を行いました。"]
+
+    # 2文目: 原因と処置(空の項目は文に入れない)
+    cause = log["cause"]
+    action = log["action"]
+    if cause and action:
+        lines.append(f"原因は{cause}で、{action}を実施しました。")
+    elif cause:
+        lines.append(f"原因は{cause}でした。")
+    elif action:
+        lines.append(f"{action}を実施しました。")
+
+    report = "\n".join(lines)
+
+    # 残課題があれば「今後の対応」として追記する
+    if log["remaining"]:
+        report += f"\n\n【今後の対応】\n{log['remaining']}"
+
+    return report
+
+
 st.title("保守作業記録")
 
 # サイドバーで画面を切り替える
@@ -65,12 +98,18 @@ if page == "新規登録":
 elif page == "一覧表示":
     st.header("作業記録の一覧")
 
-    logs = db.get_all_logs()
+    # 絞り込み条件の入力欄(横に並べる)
+    col1, col2 = st.columns(2)
+    status_filter = col1.selectbox("ステータス", ["すべて", "対応中", "完了"])
+    device_keyword = col2.text_input("機器名キーワード")
+
+    logs = db.get_logs(status_filter, device_keyword.strip())
 
     if not logs:
-        st.info("まだ記録がありません。「新規登録」から登録してください。")
+        st.info("条件に合う記録がありません。")
     else:
-        st.write(f"全 {len(logs)} 件")
+        st.write(f"{len(logs)} 件")
+        st.caption("行の左端をクリックして選ぶと、下に作業報告書の文章が表示されます。")
 
         # 表に表示するため、列名を日本語に置き換える
         column_names = {
@@ -89,4 +128,19 @@ elif page == "一覧表示":
             {column_names[key]: value for key, value in log.items()}
             for log in logs
         ]
-        st.dataframe(table, use_container_width=True, hide_index=True)
+        # on_select="rerun" で行を選べるようにし、選んだ結果を event で受け取る
+        event = st.dataframe(
+            table,
+            width="stretch",  # 画面の横幅いっぱいに表示
+            hide_index=True,
+            on_select="rerun",
+            selection_mode="single-row",
+        )
+
+        # 行が選ばれていれば、その記録の報告書を表示する
+        selected_rows = event.selection.rows
+        if selected_rows:
+            log = logs[selected_rows[0]]
+            st.subheader("作業報告書")
+            # st.code は右上にコピーボタンが付くので、そのまま貼り付けに使える
+            st.code(make_report(log), language=None, wrap_lines=True)

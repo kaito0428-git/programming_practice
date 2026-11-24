@@ -49,11 +49,28 @@ def add_log(work_at, customer, device, symptom, cause, action, remaining, status
         )
 
 
-def get_all_logs():
-    """作業記録を新しい順にすべて取得する"""
+def get_logs(status="すべて", device_keyword=""):
+    """作業記録を新しい順に取得する(条件を指定すると絞り込む)
+
+    status: 「すべて」「対応中」「完了」のどれか
+    device_keyword: 機器名に含まれる文字(空なら絞り込まない)
+    """
+    sql = "SELECT * FROM work_logs WHERE 1=1"  # 1=1 は条件を後ろに足しやすくするための書き方
+    params = []
+
+    # ステータスで絞り込む(「すべて」のときは何もしない)
+    if status != "すべて":
+        sql += " AND status = ?"
+        params.append(status)
+
+    # 機器名の部分一致で絞り込む(% は「任意の文字」の意味)
+    if device_keyword:
+        sql += " AND device LIKE ?"
+        params.append(f"%{device_keyword}%")
+
+    sql += " ORDER BY work_at DESC, id DESC"
+
     with get_connection() as conn:
-        rows = conn.execute(
-            "SELECT * FROM work_logs ORDER BY work_at DESC, id DESC"
-        ).fetchall()
+        rows = conn.execute(sql, params).fetchall()
     # 扱いやすいように辞書のリストに変換して返す
     return [dict(row) for row in rows]
